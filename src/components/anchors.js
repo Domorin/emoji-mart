@@ -37,7 +37,7 @@ export default class Anchors extends React.PureComponent {
             return null
           }
 
-          const iconId = id.startsWith('custom-') ? 'custom' : id
+          const iconId = id ? id : 'custom'
 
           return (
             <button
