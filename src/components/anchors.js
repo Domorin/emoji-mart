@@ -37,7 +37,7 @@ export default class Anchors extends React.PureComponent {
             return null
           }
 
-          const iconId = id;
+          var iconId = id;
           if(!icons.categories[iconId])
           {
             iconId = "custom"
