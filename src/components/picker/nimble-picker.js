@@ -63,7 +63,19 @@ export default class NimblePicker extends React.PureComponent {
 
     this.data = props.data
     this.i18n = deepMerge(I18N, props.i18n)
-    this.icons = deepMerge(icons, props.icons)
+
+    var new_categories = { categories: {} }
+    for(let key in icons.categories)
+    {
+      new_categories.categories[key] = icons.categories[key]
+    }
+    for(let key in props.icons.categories)
+    {
+      new_categories.categories[key] = props.icons.categories[key];
+    }
+
+    this.icons = new_categories
+
     this.state = { firstRender: true }
 
     this.categories = []
